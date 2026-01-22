@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6696464A5D9B8E98D88F36E0 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3D12D7C87713A7459DA01 /* AnalyticsService.swift */; };
+		78A6BCDAEBDAC28CCC343DEF /* AppsFlyerLib.xcframework in Static XCFramework Dependencies */ = {isa = PBXBuildFile; fileRef = A61E9728734FCF7F75919DDB /* AppsFlyerLib.xcframework */; };
 		A28AFD61A9A0CD746FDB323B /* AnalyticsContracts.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = AA568D1705804E3B0B3F77A1 /* AnalyticsContracts.framework */; };
-		DB4D620D30630A4DDF0E0FC6 /* AppsFlyerLib.xcframework in Static XCFramework Dependencies */ = {isa = PBXBuildFile; fileRef = F73D7CC26CB14D1DD175AA9E /* AppsFlyerLib.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +29,7 @@
 			dstPath = _StaticXCFrameworkDependencies/Analytics;
 			dstSubfolderSpec = 16;
 			files = (
-				DB4D620D30630A4DDF0E0FC6 /* AppsFlyerLib.xcframework in Static XCFramework Dependencies */,
+				78A6BCDAEBDAC28CCC343DEF /* AppsFlyerLib.xcframework in Static XCFramework Dependencies */,
 			);
 			name = "Static XCFramework Dependencies";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -50,8 +50,8 @@
 		2FA3D12D7C87713A7459DA01 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		37277B1FAD556120E9A1F0DD /* Analytics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Analytics-Info.plist"; sourceTree = "<group>"; };
 		864A777352A0CE4573561E47 /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A61E9728734FCF7F75919DDB /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; path = AppsFlyerLib.xcframework; sourceTree = "<group>"; };
 		AA568D1705804E3B0B3F77A1 /* AnalyticsContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnalyticsContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F73D7CC26CB14D1DD175AA9E /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; path = AppsFlyerLib.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +65,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C6D6FBCCDA16052AF2CDA3A /* artifacts */ = {
+		1E55952165D779A1F239904C /* appsflyerframework-static */ = {
 			isa = PBXGroup;
 			children = (
-				EDA4F3D0735BB2879AFB10CB /* appsflyerframework-static */,
+				7177FD644D199AAC0E2DA3EC /* AppsFlyerLib */,
 			);
-			path = artifacts;
+			path = "appsflyerframework-static";
 			sourceTree = "<group>";
 		};
 		25EFC9AAF2D80D56747F6635 /* InfoPlists */ = {
@@ -81,6 +81,30 @@
 			path = InfoPlists;
 			sourceTree = "<group>";
 		};
+		3A0FD087E042D93D262B6BBF /* artifacts */ = {
+			isa = PBXGroup;
+			children = (
+				1E55952165D779A1F239904C /* appsflyerframework-static */,
+			);
+			path = artifacts;
+			sourceTree = "<group>";
+		};
+		435A93A7AFF3FA139E1A8526 /* .build */ = {
+			isa = PBXGroup;
+			children = (
+				3A0FD087E042D93D262B6BBF /* artifacts */,
+			);
+			path = .build;
+			sourceTree = "<group>";
+		};
+		7177FD644D199AAC0E2DA3EC /* AppsFlyerLib */ = {
+			isa = PBXGroup;
+			children = (
+				A61E9728734FCF7F75919DDB /* AppsFlyerLib.xcframework */,
+			);
+			path = AppsFlyerLib;
+			sourceTree = "<group>";
+		};
 		8B67114F6A9577A5DE6D9E98 /* Derived */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,20 +113,12 @@
 			path = Derived;
 			sourceTree = "<group>";
 		};
-		8E1BDD6B435E9E66C7D6FD97 /* .build */ = {
+		90CEE37D9A72030FC520809F /* Tuist */ = {
 			isa = PBXGroup;
 			children = (
-				0C6D6FBCCDA16052AF2CDA3A /* artifacts */,
+				435A93A7AFF3FA139E1A8526 /* .build */,
 			);
-			path = .build;
-			sourceTree = "<group>";
-		};
-		9D7071F4C750D288D04B5074 /* AppsFlyerLib */ = {
-			isa = PBXGroup;
-			children = (
-				F73D7CC26CB14D1DD175AA9E /* AppsFlyerLib.xcframework */,
-			);
-			path = AppsFlyerLib;
+			path = Tuist;
 			sourceTree = "<group>";
 		};
 		A10F363DB74BAE665F81CEE6 /* Products */ = {
@@ -130,31 +146,23 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
+		DF4F45569FEC0B70AE00BF97 /* Reminder2 */ = {
+			isa = PBXGroup;
+			children = (
+				90CEE37D9A72030FC520809F /* Tuist */,
+			);
+			name = Reminder2;
+			path = ../../../../Reminder2;
+			sourceTree = "<group>";
+		};
 		E9262D4829DF45F06C92061A /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				8B67114F6A9577A5DE6D9E98 /* Derived */,
+				DF4F45569FEC0B70AE00BF97 /* Reminder2 */,
 				AE550CBD7AC66E452BFAA1F4 /* Sources */,
-				F684C0076C5101E4B83AFB7C /* Tuist */,
 			);
 			name = Project;
-			sourceTree = "<group>";
-		};
-		EDA4F3D0735BB2879AFB10CB /* appsflyerframework-static */ = {
-			isa = PBXGroup;
-			children = (
-				9D7071F4C750D288D04B5074 /* AppsFlyerLib */,
-			);
-			path = "appsflyerframework-static";
-			sourceTree = "<group>";
-		};
-		F684C0076C5101E4B83AFB7C /* Tuist */ = {
-			isa = PBXGroup;
-			children = (
-				8E1BDD6B435E9E66C7D6FD97 /* .build */,
-			);
-			name = Tuist;
-			path = ../../../Tuist;
 			sourceTree = "<group>";
 		};
 		F99F16D07A69EBB28A8DFFA7 = {

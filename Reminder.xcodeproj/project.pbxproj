@@ -1,0 +1,715 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		009762618CB733B19AED2DAF /* MainTabViewContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6E68EED68711142AB288B9 /* MainTabViewContracts.framework */; };
+		04DFEDB49AB46F48128B185B /* PersistenceContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD3C11AF831D9134F57FF36 /* PersistenceContracts.framework */; };
+		06B1ED20E408D191E2587DD9 /* TuistAssets+Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347829E67766099281246456 /* TuistAssets+Reminder.swift */; };
+		12F265C2892BB15673B81585 /* Configurations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ADD2001BCCFAF17A596A2C /* Configurations.framework */; };
+		13B4606BC22CF8BF7C3A43DE /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF27CB9D243B6CAEBF604B19 /* Swinject.framework */; };
+		1915FCE7A74687EFBE7DA5B6 /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9425290D52B2F45032762E /* Analytics.framework */; };
+		1A51ECDAC2F0437B06FFE83A /* AdsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC55E2B04D103F490D0AC5D2 /* AdsUI.framework */; };
+		1EAADB6DC2D17826698654FE /* NavigationContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEC1B43763498E2D04B0484 /* NavigationContracts.framework */; };
+		206609FA062E588D0F534C9D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE49C9A38997D07862959F11 /* WebKit.framework */; };
+		2494A49C98F04BCFEB2C04FA /* Event_Event.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00C4234C9507C3E82FE08279 /* Event_Event.bundle */; };
+		274100888929C837851E739A /* TuistStrings+Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7161D3466033AC3F265F45F /* TuistStrings+Reminder.swift */; };
+		27C265D2FDEAB131FD36EAE0 /* AppDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C8406D9A9AEFA76B678554 /* AppDI.framework */; };
+		2A2A081A9CCE08D9AA7F3510 /* Settings_Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E85905ABA65CF4D97F641C32 /* Settings_Settings.bundle */; };
+		357605ED0A4B041F66978C16 /* MainTabView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3538C6D2E7075881FC7F4E2E /* MainTabView.framework */; };
+		38B175D206538DB50DA4ABDE /* Event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE538F6CC038BC6210758CB /* Event.framework */; };
+		3AE17F4A15E4AA078B37A895 /* DomainLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0D75B7934DAFB0F62EB2CF /* DomainLocalization.framework */; };
+		3DED218AADCF9D7BD5AFC0D0 /* Categories_Categories.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = DD64F373DDD38691A67EE8E7 /* Categories_Categories.bundle */; };
+		3E79E3C8B5933AF7D5F29ED7 /* AppServices_AppServices.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = FC872B4661663D49A0C7E5FF /* AppServices_AppServices.bundle */; };
+		3EBAAF155AD778FAA7E6DAC4 /* DomainContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D14D63BC9642F6D6F2C771 /* DomainContracts.framework */; };
+		42D6C49A0C129487E665EE83 /* MainTabView_MainTabView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 229288C50875A12745A6CBB5 /* MainTabView_MainTabView.bundle */; };
+		42EECEB9FC5A94656791F3A5 /* Closest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D6B56857672544A9B4C018 /* Closest.framework */; };
+		4309024D4DA160E4D2B9030F /* AppServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBFFE5EDFF5B9DD189F5433 /* AppServices.framework */; };
+		46C942AFE6265BC6A23FE636 /* Closest_Closest.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 506673AF3976D2590AC6814E /* Closest_Closest.bundle */; };
+		4A954DAC742A12F7499B7DE4 /* MainTabView_MainTabView.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 229288C50875A12745A6CBB5 /* MainTabView_MainTabView.bundle */; };
+		4F869B8D6F27E3B70347457A /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1559933C2E5F7D65C5760695 /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		54E99E76B386E007B272EACD /* DesignSystem_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E902DE576C8EE613CC6A7E01 /* DesignSystem_DesignSystem.bundle */; };
+		62230767C7D6EAFF1F6FE9DB /* AppServicesContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E37F7AE613F22770ADD4A9A /* AppServicesContracts.framework */; };
+		623341BD6E437BFF595E9C3D /* Language.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD33F98A57494AA6BD8EC9C /* Language.framework */; };
+		656CFE58765FC063B639D833 /* AppsFlyerLib.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B337EF04B6F0B5F0DCD903 /* AppsFlyerLib.xcframework */; };
+		67CA10B20F5B4B5D63A78E27 /* Categories_Categories.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD64F373DDD38691A67EE8E7 /* Categories_Categories.bundle */; };
+		6E3DD4D05AEEB9CB18F7D380 /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AEB756533E73E5B0BC013E /* Settings.framework */; };
+		724C52A8D04682FF5B3A3265 /* Closest_Closest.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 506673AF3976D2590AC6814E /* Closest_Closest.bundle */; };
+		745020101CBEA3FF924F6577 /* Persistence_Persistence.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14BFFCAEF63B8C731B2DB32A /* Persistence_Persistence.bundle */; };
+		77D4813C7FE938FF0A88D7A3 /* TuistBundle+Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B804328FA1E38A13DBD6A /* TuistBundle+Reminder.swift */; };
+		7FE66D9945FF23D17A109ED9 /* Settings_Settings.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E85905ABA65CF4D97F641C32 /* Settings_Settings.bundle */; };
+		810962B540D20DABDC0A976B /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847BA562A19C942D0B972A53 /* DesignSystem.framework */; };
+		89E47DDCA733E0BF0B12E1F2 /* Start_Start.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 31F599F0AE17084129CC766B /* Start_Start.bundle */; };
+		8CBD9B061D92AAB647429769 /* Start_Start.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 31F599F0AE17084129CC766B /* Start_Start.bundle */; };
+		9829AED4C3959C1A6848A4CA /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74945010D1D0CD03B78BAC8F /* Domain.framework */; };
+		9A2131FFE34F51B7385F1D3C /* Event_Event.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 00C4234C9507C3E82FE08279 /* Event_Event.bundle */; };
+		9A2E61CEC9AE63BB926D9724 /* Start.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C73ABA41E9F37CC650AE4A /* Start.framework */; };
+		9C3F76AE418C00452105E00B /* UserDefaultsStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335E18E52A4A47B83CF24657 /* UserDefaultsStorage.framework */; };
+		9D03DB5794FE00B7F10500D6 /* UserMessagingPlatform.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C46577D2A9C5227B9492874 /* UserMessagingPlatform.xcframework */; };
+		9D2F22803FEA1A97AD6C18FD /* AppServices_AppServices.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC872B4661663D49A0C7E5FF /* AppServices_AppServices.bundle */; };
+		A14CAEC4CB988161A92C419B /* DesignSystem_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E902DE576C8EE613CC6A7E01 /* DesignSystem_DesignSystem.bundle */; };
+		BF81DA1BF20C094874719993 /* GoogleMobileAdsTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE3A7A27EC66F3351CAEECF /* GoogleMobileAdsTarget.framework */; };
+		D4A7C726C990BEFB0405FEA7 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01297ED46B7E3A7A15A36C38 /* GoogleMobileAds.xcframework */; };
+		D61F405E2C7E1B97D462A225 /* DomainLocalization_DomainLocalization.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0C1122C3C5A03DB368C39934 /* DomainLocalization_DomainLocalization.bundle */; };
+		D98E5B8A222622644EC6D530 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1559933C2E5F7D65C5760695 /* Persistence.framework */; };
+		E553A941C4AFBE1AAFA1CE54 /* Categories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E06689603FABE73C7074E55 /* Categories.framework */; };
+		EA1BA604B9C05E716C6A8BA7 /* UserMessagingPlatformTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BB22318CBF98CCE5A5C712 /* UserMessagingPlatformTarget.framework */; };
+		EA328C54262D78DF0547E458 /* Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F2666902C528848CFACD91 /* Platform.framework */; };
+		ED0775A1CAD8D048808C4802 /* Persistence_Persistence.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 14BFFCAEF63B8C731B2DB32A /* Persistence_Persistence.bundle */; };
+		F18415969FC1C31280074762 /* AnalyticsContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF2A7BC8F6C98949937DC66 /* AnalyticsContracts.framework */; };
+		F6D4B83F4D76715D133A0106 /* DomainLocalization_DomainLocalization.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C1122C3C5A03DB368C39934 /* DomainLocalization_DomainLocalization.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46AA6324412F80F83A293F30 /* Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstSubfolderSpec = 16;
+			files = (
+				3E79E3C8B5933AF7D5F29ED7 /* AppServices_AppServices.bundle in Dependencies */,
+				3DED218AADCF9D7BD5AFC0D0 /* Categories_Categories.bundle in Dependencies */,
+				724C52A8D04682FF5B3A3265 /* Closest_Closest.bundle in Dependencies */,
+				54E99E76B386E007B272EACD /* DesignSystem_DesignSystem.bundle in Dependencies */,
+				D61F405E2C7E1B97D462A225 /* DomainLocalization_DomainLocalization.bundle in Dependencies */,
+				9A2131FFE34F51B7385F1D3C /* Event_Event.bundle in Dependencies */,
+				4A954DAC742A12F7499B7DE4 /* MainTabView_MainTabView.bundle in Dependencies */,
+				ED0775A1CAD8D048808C4802 /* Persistence_Persistence.bundle in Dependencies */,
+				7FE66D9945FF23D17A109ED9 /* Settings_Settings.bundle in Dependencies */,
+				89E47DDCA733E0BF0B12E1F2 /* Start_Start.bundle in Dependencies */,
+			);
+			name = Dependencies;
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		7BF848E7DC8D4F56741B4352 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4F869B8D6F27E3B70347457A /* Persistence.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00C4234C9507C3E82FE08279 /* Event_Event.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Event_Event.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		01297ED46B7E3A7A15A36C38 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		0C1122C3C5A03DB368C39934 /* DomainLocalization_DomainLocalization.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLocalization_DomainLocalization.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		10D14D63BC9642F6D6F2C771 /* DomainContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BFFCAEF63B8C731B2DB32A /* Persistence_Persistence.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Persistence_Persistence.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1559933C2E5F7D65C5760695 /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BB22318CBF98CCE5A5C712 /* UserMessagingPlatformTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserMessagingPlatformTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E06689603FABE73C7074E55 /* Categories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Categories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		229288C50875A12745A6CBB5 /* MainTabView_MainTabView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTabView_MainTabView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C73ABA41E9F37CC650AE4A /* Start.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Start.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31F599F0AE17084129CC766B /* Start_Start.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Start_Start.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		335E18E52A4A47B83CF24657 /* UserDefaultsStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserDefaultsStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		347829E67766099281246456 /* TuistAssets+Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+Reminder.swift"; sourceTree = "<group>"; };
+		3538C6D2E7075881FC7F4E2E /* MainTabView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MainTabView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6E68EED68711142AB288B9 /* MainTabViewContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MainTabViewContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B337EF04B6F0B5F0DCD903 /* AppsFlyerLib.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:6UQAD4B3U2:APPSFLYER LTD"; lastKnownFileType = wrapper.xcframework; path = AppsFlyerLib.xcframework; sourceTree = "<group>"; };
+		4BE3A7A27EC66F3351CAEECF /* GoogleMobileAdsTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleMobileAdsTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E37F7AE613F22770ADD4A9A /* AppServicesContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppServicesContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		506673AF3976D2590AC6814E /* Closest_Closest.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Closest_Closest.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C8406D9A9AEFA76B678554 /* AppDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD3C11AF831D9134F57FF36 /* PersistenceContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PersistenceContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63ADD2001BCCFAF17A596A2C /* Configurations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Configurations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD33F98A57494AA6BD8EC9C /* Language.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Language.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74945010D1D0CD03B78BAC8F /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EE538F6CC038BC6210758CB /* Event.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Event.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		847BA562A19C942D0B972A53 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C46577D2A9C5227B9492874 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; path = UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		8D1F63E7C161543E3BFD5567 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0D75B7934DAFB0F62EB2CF /* DomainLocalization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLocalization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCBFFE5EDFF5B9DD189F5433 /* AppServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE49C9A38997D07862959F11 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		CC2B804328FA1E38A13DBD6A /* TuistBundle+Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Reminder.swift"; sourceTree = "<group>"; };
+		D7161D3466033AC3F265F45F /* TuistStrings+Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistStrings+Reminder.swift"; sourceTree = "<group>"; };
+		D9AEB756533E73E5B0BC013E /* Settings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Settings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F2666902C528848CFACD91 /* Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9425290D52B2F45032762E /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD64F373DDD38691A67EE8E7 /* Categories_Categories.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Categories_Categories.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFEC1B43763498E2D04B0484 /* NavigationContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavigationContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D6B56857672544A9B4C018 /* Closest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Closest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85905ABA65CF4D97F641C32 /* Settings_Settings.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Settings_Settings.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E902DE576C8EE613CC6A7E01 /* DesignSystem_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystem_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC55E2B04D103F490D0AC5D2 /* AdsUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdsUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDF2A7BC8F6C98949937DC66 /* AnalyticsContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnalyticsContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE59DF65DCBC1FCA1BE82E35 /* Reminder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Reminder-Info.plist"; sourceTree = "<group>"; };
+		EF27CB9D243B6CAEBF604B19 /* Swinject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swinject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC872B4661663D49A0C7E5FF /* AppServices_AppServices.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppServices_AppServices.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5105042583DA239C1B02AA17 /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
+		783917BEA7C0CFEAAD1D03A9 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		292A06DADC4FC22B8EAC837A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206609FA062E588D0F534C9D /* WebKit.framework in Frameworks */,
+				1A51ECDAC2F0437B06FFE83A /* AdsUI.framework in Frameworks */,
+				1915FCE7A74687EFBE7DA5B6 /* Analytics.framework in Frameworks */,
+				F18415969FC1C31280074762 /* AnalyticsContracts.framework in Frameworks */,
+				27C265D2FDEAB131FD36EAE0 /* AppDI.framework in Frameworks */,
+				4309024D4DA160E4D2B9030F /* AppServices.framework in Frameworks */,
+				62230767C7D6EAFF1F6FE9DB /* AppServicesContracts.framework in Frameworks */,
+				E553A941C4AFBE1AAFA1CE54 /* Categories.framework in Frameworks */,
+				42EECEB9FC5A94656791F3A5 /* Closest.framework in Frameworks */,
+				12F265C2892BB15673B81585 /* Configurations.framework in Frameworks */,
+				810962B540D20DABDC0A976B /* DesignSystem.framework in Frameworks */,
+				9829AED4C3959C1A6848A4CA /* Domain.framework in Frameworks */,
+				3EBAAF155AD778FAA7E6DAC4 /* DomainContracts.framework in Frameworks */,
+				3AE17F4A15E4AA078B37A895 /* DomainLocalization.framework in Frameworks */,
+				38B175D206538DB50DA4ABDE /* Event.framework in Frameworks */,
+				BF81DA1BF20C094874719993 /* GoogleMobileAdsTarget.framework in Frameworks */,
+				623341BD6E437BFF595E9C3D /* Language.framework in Frameworks */,
+				357605ED0A4B041F66978C16 /* MainTabView.framework in Frameworks */,
+				009762618CB733B19AED2DAF /* MainTabViewContracts.framework in Frameworks */,
+				1EAADB6DC2D17826698654FE /* NavigationContracts.framework in Frameworks */,
+				D98E5B8A222622644EC6D530 /* Persistence.framework in Frameworks */,
+				04DFEDB49AB46F48128B185B /* PersistenceContracts.framework in Frameworks */,
+				EA328C54262D78DF0547E458 /* Platform.framework in Frameworks */,
+				6E3DD4D05AEEB9CB18F7D380 /* Settings.framework in Frameworks */,
+				9A2E61CEC9AE63BB926D9724 /* Start.framework in Frameworks */,
+				13B4606BC22CF8BF7C3A43DE /* Swinject.framework in Frameworks */,
+				9C3F76AE418C00452105E00B /* UserDefaultsStorage.framework in Frameworks */,
+				EA1BA604B9C05E716C6A8BA7 /* UserMessagingPlatformTarget.framework in Frameworks */,
+				656CFE58765FC063B639D833 /* AppsFlyerLib.xcframework in Frameworks */,
+				D4A7C726C990BEFB0405FEA7 /* GoogleMobileAds.xcframework in Frameworks */,
+				9D03DB5794FE00B7F10500D6 /* UserMessagingPlatform.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		158AC9B0722E7AFFEA5C84A3 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				783917BEA7C0CFEAAD1D03A9 /* Resources */,
+				5105042583DA239C1B02AA17 /* Sources */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		1D1ABB819908BFEE91FA7268 /* UserMessagingPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				8C46577D2A9C5227B9492874 /* UserMessagingPlatform.xcframework */,
+			);
+			path = UserMessagingPlatform;
+			sourceTree = "<group>";
+		};
+		2B28ADDEA3659216C247680E = {
+			isa = PBXGroup;
+			children = (
+				45657BDBA769520996ECFB8A /* Products */,
+				DDFC956093E300B82C23CDF4 /* Project */,
+				9BD9383C07C39A390BFCBB07 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2FD4407B025590F0FAA388A5 /* artifacts */ = {
+			isa = PBXGroup;
+			children = (
+				436185EC1A3E8783A0C655A8 /* appsflyerframework-static */,
+				A66147211217C8D4542A893B /* swift-package-manager-google-mobile-ads */,
+				FE901D2730CB6D5A2AAAA99E /* swift-package-manager-google-user-messaging-platform */,
+			);
+			path = artifacts;
+			sourceTree = "<group>";
+		};
+		436185EC1A3E8783A0C655A8 /* appsflyerframework-static */ = {
+			isa = PBXGroup;
+			children = (
+				6768F0C814D5E31211674070 /* AppsFlyerLib */,
+			);
+			path = "appsflyerframework-static";
+			sourceTree = "<group>";
+		};
+		440CA2E0FD22F9F6ADE626F1 /* Reminder2 */ = {
+			isa = PBXGroup;
+			children = (
+				B9129EBB8603F6348295885E /* Tuist */,
+			);
+			name = Reminder2;
+			path = ../Reminder2;
+			sourceTree = "<group>";
+		};
+		45657BDBA769520996ECFB8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC55E2B04D103F490D0AC5D2 /* AdsUI.framework */,
+				DC9425290D52B2F45032762E /* Analytics.framework */,
+				EDF2A7BC8F6C98949937DC66 /* AnalyticsContracts.framework */,
+				57C8406D9A9AEFA76B678554 /* AppDI.framework */,
+				FC872B4661663D49A0C7E5FF /* AppServices_AppServices.bundle */,
+				BCBFFE5EDFF5B9DD189F5433 /* AppServices.framework */,
+				4E37F7AE613F22770ADD4A9A /* AppServicesContracts.framework */,
+				DD64F373DDD38691A67EE8E7 /* Categories_Categories.bundle */,
+				1E06689603FABE73C7074E55 /* Categories.framework */,
+				506673AF3976D2590AC6814E /* Closest_Closest.bundle */,
+				E0D6B56857672544A9B4C018 /* Closest.framework */,
+				63ADD2001BCCFAF17A596A2C /* Configurations.framework */,
+				E902DE576C8EE613CC6A7E01 /* DesignSystem_DesignSystem.bundle */,
+				847BA562A19C942D0B972A53 /* DesignSystem.framework */,
+				74945010D1D0CD03B78BAC8F /* Domain.framework */,
+				10D14D63BC9642F6D6F2C771 /* DomainContracts.framework */,
+				0C1122C3C5A03DB368C39934 /* DomainLocalization_DomainLocalization.bundle */,
+				9F0D75B7934DAFB0F62EB2CF /* DomainLocalization.framework */,
+				00C4234C9507C3E82FE08279 /* Event_Event.bundle */,
+				7EE538F6CC038BC6210758CB /* Event.framework */,
+				4BE3A7A27EC66F3351CAEECF /* GoogleMobileAdsTarget.framework */,
+				6FD33F98A57494AA6BD8EC9C /* Language.framework */,
+				229288C50875A12745A6CBB5 /* MainTabView_MainTabView.bundle */,
+				3538C6D2E7075881FC7F4E2E /* MainTabView.framework */,
+				3D6E68EED68711142AB288B9 /* MainTabViewContracts.framework */,
+				DFEC1B43763498E2D04B0484 /* NavigationContracts.framework */,
+				14BFFCAEF63B8C731B2DB32A /* Persistence_Persistence.bundle */,
+				1559933C2E5F7D65C5760695 /* Persistence.framework */,
+				5DD3C11AF831D9134F57FF36 /* PersistenceContracts.framework */,
+				D9F2666902C528848CFACD91 /* Platform.framework */,
+				8D1F63E7C161543E3BFD5567 /* Reminder.app */,
+				E85905ABA65CF4D97F641C32 /* Settings_Settings.bundle */,
+				D9AEB756533E73E5B0BC013E /* Settings.framework */,
+				31F599F0AE17084129CC766B /* Start_Start.bundle */,
+				29C73ABA41E9F37CC650AE4A /* Start.framework */,
+				EF27CB9D243B6CAEBF604B19 /* Swinject.framework */,
+				335E18E52A4A47B83CF24657 /* UserDefaultsStorage.framework */,
+				18BB22318CBF98CCE5A5C712 /* UserMessagingPlatformTarget.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E3255A9C1D5246587EDA4D0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				347829E67766099281246456 /* TuistAssets+Reminder.swift */,
+				CC2B804328FA1E38A13DBD6A /* TuistBundle+Reminder.swift */,
+				D7161D3466033AC3F265F45F /* TuistStrings+Reminder.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		6768F0C814D5E31211674070 /* AppsFlyerLib */ = {
+			isa = PBXGroup;
+			children = (
+				42B337EF04B6F0B5F0DCD903 /* AppsFlyerLib.xcframework */,
+			);
+			path = AppsFlyerLib;
+			sourceTree = "<group>";
+		};
+		6FCF20231F90DA4F87414FC2 /* GoogleMobileAds */ = {
+			isa = PBXGroup;
+			children = (
+				01297ED46B7E3A7A15A36C38 /* GoogleMobileAds.xcframework */,
+			);
+			path = GoogleMobileAds;
+			sourceTree = "<group>";
+		};
+		7C265297B7FB8E175945DB38 /* .build */ = {
+			isa = PBXGroup;
+			children = (
+				2FD4407B025590F0FAA388A5 /* artifacts */,
+			);
+			path = .build;
+			sourceTree = "<group>";
+		};
+		9BD9383C07C39A390BFCBB07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE49C9A38997D07862959F11 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A66147211217C8D4542A893B /* swift-package-manager-google-mobile-ads */ = {
+			isa = PBXGroup;
+			children = (
+				6FCF20231F90DA4F87414FC2 /* GoogleMobileAds */,
+			);
+			path = "swift-package-manager-google-mobile-ads";
+			sourceTree = "<group>";
+		};
+		B9129EBB8603F6348295885E /* Tuist */ = {
+			isa = PBXGroup;
+			children = (
+				7C265297B7FB8E175945DB38 /* .build */,
+			);
+			path = Tuist;
+			sourceTree = "<group>";
+		};
+		CBA6FD2DFB3CD7F517C9C68C /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				F02E7BB855094C6B810B3700 /* InfoPlists */,
+				5E3255A9C1D5246587EDA4D0 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		DDFC956093E300B82C23CDF4 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				CBA6FD2DFB3CD7F517C9C68C /* Derived */,
+				158AC9B0722E7AFFEA5C84A3 /* Reminder */,
+				440CA2E0FD22F9F6ADE626F1 /* Reminder2 */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		F02E7BB855094C6B810B3700 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				EE59DF65DCBC1FCA1BE82E35 /* Reminder-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		FE901D2730CB6D5A2AAAA99E /* swift-package-manager-google-user-messaging-platform */ = {
+			isa = PBXGroup;
+			children = (
+				1D1ABB819908BFEE91FA7268 /* UserMessagingPlatform */,
+			);
+			path = "swift-package-manager-google-user-messaging-platform";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E5D0C769A8362620DEC4FC3 /* Reminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5AFAF78F12C2F70C332925 /* Build configuration list for PBXNativeTarget "Reminder" */;
+			buildPhases = (
+				370139284C25DE6D0BA63454 /* Sources */,
+				D44C6D849A126BE476C04C17 /* Resources */,
+				292A06DADC4FC22B8EAC837A /* Frameworks */,
+				7BF848E7DC8D4F56741B4352 /* Embed Frameworks */,
+				46AA6324412F80F83A293F30 /* Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5105042583DA239C1B02AA17 /* Sources */,
+				783917BEA7C0CFEAAD1D03A9 /* Resources */,
+			);
+			name = Reminder;
+			packageProductDependencies = (
+			);
+			productName = Reminder;
+			productReference = 8D1F63E7C161543E3BFD5567 /* Reminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BA347215F7507DC261CD273 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 2E5390FBB53A9015786D84E7 /* Build configuration list for PBXProject "Reminder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				uk,
+			);
+			mainGroup = 2B28ADDEA3659216C247680E;
+			productRefGroup = 45657BDBA769520996ECFB8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E5D0C769A8362620DEC4FC3 /* Reminder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D44C6D849A126BE476C04C17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2F22803FEA1A97AD6C18FD /* AppServices_AppServices.bundle in Resources */,
+				67CA10B20F5B4B5D63A78E27 /* Categories_Categories.bundle in Resources */,
+				46C942AFE6265BC6A23FE636 /* Closest_Closest.bundle in Resources */,
+				A14CAEC4CB988161A92C419B /* DesignSystem_DesignSystem.bundle in Resources */,
+				F6D4B83F4D76715D133A0106 /* DomainLocalization_DomainLocalization.bundle in Resources */,
+				2494A49C98F04BCFEB2C04FA /* Event_Event.bundle in Resources */,
+				42D6C49A0C129487E665EE83 /* MainTabView_MainTabView.bundle in Resources */,
+				745020101CBEA3FF924F6577 /* Persistence_Persistence.bundle in Resources */,
+				2A2A081A9CCE08D9AA7F3510 /* Settings_Settings.bundle in Resources */,
+				8CBD9B061D92AAB647429769 /* Start_Start.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		370139284C25DE6D0BA63454 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06B1ED20E408D191E2587DD9 /* TuistAssets+Reminder.swift in Sources */,
+				77D4813C7FE938FF0A88D7A3 /* TuistBundle+Reminder.swift in Sources */,
+				274100888929C837851E739A /* TuistStrings+Reminder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0677F4CDD4E23A462FDACDEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13F1062C551B4F93D45968DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_LANGUAGE = en;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Reminder2/Tuist/.build/artifacts/appsflyerframework-static/AppsFlyerLib",
+					"$(SRCROOT)/../Reminder2/Tuist/.build/artifacts/swift-package-manager-google-mobile-ads/GoogleMobileAds",
+					"$(SRCROOT)/../Reminder2/Tuist/.build/artifacts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatform",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include",
+				);
+				INFOPLIST_FILE = "Derived/InfoPlists/Reminder-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UserMessagingPlatformTarget/UserMessagingPlatformTarget.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UserMessagingPlatformTarget/UserMessagingPlatformTarget.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Reminder.Public.Random.sufeuPakqbfGdmeifbw;
+				PRODUCT_NAME = Reminder;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2180C96F375F9B919CAE74A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.2;
+			};
+			name = Debug;
+		};
+		A7DE7B3F415676D0279A7329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_LANGUAGE = en;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../Reminder2/Tuist/.build/artifacts/appsflyerframework-static/AppsFlyerLib",
+					"$(SRCROOT)/../Reminder2/Tuist/.build/artifacts/swift-package-manager-google-mobile-ads/GoogleMobileAds",
+					"$(SRCROOT)/../Reminder2/Tuist/.build/artifacts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatform",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include",
+				);
+				INFOPLIST_FILE = "Derived/InfoPlists/Reminder-Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UserMessagingPlatformTarget/UserMessagingPlatformTarget.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UserMessagingPlatformTarget/UserMessagingPlatformTarget.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Reminder.Public.Random.sufeuPakqbfGdmeifbw;
+				PRODUCT_NAME = Reminder;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E5390FBB53A9015786D84E7 /* Build configuration list for PBXProject "Reminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2180C96F375F9B919CAE74A4 /* Debug */,
+				0677F4CDD4E23A462FDACDEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C5AFAF78F12C2F70C332925 /* Build configuration list for PBXNativeTarget "Reminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F1062C551B4F93D45968DD /* Debug */,
+				A7DE7B3F415676D0279A7329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BA347215F7507DC261CD273 /* Project object */;
+}

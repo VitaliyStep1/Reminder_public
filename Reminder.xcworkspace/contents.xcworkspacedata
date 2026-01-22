@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Reminder.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Reminder"
+      name = "Reminder">
+      <Group
+         location = "group:Features"
+         name = "Features">
+         <FileRef
+            location = "group:Categories/Categories.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Closest/Closest.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:DomainLocalization/DomainLocalization.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Event/Event.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:MainTabView/MainTabView.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:MainTabViewContracts/MainTabViewContracts.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:NavigationContracts/NavigationContracts.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Settings/Settings.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Start/Start.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Foundation"
+         name = "Foundation">
+         <FileRef
+            location = "group:Analytics/Analytics.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:AnalyticsContracts/AnalyticsContracts.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:AppDI/AppDI.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:AppServices/AppServices.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:AppServicesContracts/AppServicesContracts.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Configurations/Configurations.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Domain/Domain.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:DomainContracts/DomainContracts.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Language/Language.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Persistence/Persistence.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:PersistenceContracts/PersistenceContracts.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:Platform/Platform.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:UserDefaultsStorage/UserDefaultsStorage.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:UIComponents"
+         name = "UIComponents">
+         <FileRef
+            location = "group:AdsUI/AdsUI.xcodeproj">
+         </FileRef>
+         <FileRef
+            location = "group:DesignSystem/DesignSystem.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Dependencies">
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/GoogleMobileAds/GoogleMobileAds.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/GoogleUserMessagingPlatform/GoogleUserMessagingPlatform.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Tuist/.build/tuist-derived/Swinject/Swinject.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
