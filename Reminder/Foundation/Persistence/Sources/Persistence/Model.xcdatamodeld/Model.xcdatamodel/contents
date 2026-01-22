@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="24G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryObject" representedClassName=".CategoryObject" syncable="YES">
+        <attribute name="categoryGroup" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="categoryRepeat" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="defaultKey" optional="YES" attributeType="String"/>
+        <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isUserCreated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="EventObject" inverseName="category" inverseEntity="EventObject"/>
+    </entity>
+    <entity name="EventObject" representedClassName=".EventObject" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="isRemindBeforeActive" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isRemindOnDayActive" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isRemindRepeated" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="remindBeforeDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="remindBeforeDays" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="remindBeforeTimeDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="remindOnDayTimeDate" optional="NO" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="remindOnDayDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="identifier" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="eventPeriod" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="onDayLNEventId" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="beforeLNEventId" optional="NO" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryObject" inverseName="events" inverseEntity="CategoryObject"/>
+    </entity>
+</model>

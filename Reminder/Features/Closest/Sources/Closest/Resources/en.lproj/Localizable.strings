@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  ClosestTab
+
+  Created by Vitaliy Stepanenko on 17.11.2025.
+  
+*/
+"closestScreenTitle" = "Closest events";
+"closestAllFilterTitle" = "All";
+"closestCreateEventButtonTitle" = "Create event";
+"closestAddEventButtonTitle" = "Add";
+"closestNoEventsText" = "There are no events yet.\nPlease create one.";
+"closestEventsCountFormat" = "Events: %d";
+"closestThisMonthTitle" = "This month";
+"closestNextMonthTitle" = "Next month";
+"closestTodayTitle" = "Today";
+"closestTomorrowTitle" = "Tomorrow";

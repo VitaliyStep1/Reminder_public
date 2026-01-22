@@ -1,0 +1,54 @@
+"deleteEventTitle" = "Видалити цю подію?";
+"deleteEventMessage" = "Цю дію не можна скасувати.";
+"eventTitleEmptyAlert" = "Назва події не повинна бути порожньою";
+"eventNotSavedAlert" = "Подію не збережено";
+"eventDeleteFailedAlert" = "Не вдалося видалити подію";
+"eventNotFoundAlert" = "Подію не знайдено";
+"categoryNotFoundAlert" = "Категорію не знайдено";
+
+"createEventScreenTitle" = "Додати подію";
+"createBirthdayScreenTitle" = "Додати день народження";
+"createAnniversaryScreenTitle" = "Додати річницю";
+"createNotificationScreenTitle" = "Додати сповіщення";
+"createEventButtonTitle" = "Створити";
+"editEventScreenTitle" = "Редагувати подію";
+"editBirthdayScreenTitle" = "Редагувати день народження";
+"editAnniversaryScreenTitle" = "Редагувати річницю";
+"editNotificationScreenTitle" = "Редагувати сповіщення";
+"saveEventButtonTitle" = "Зберегти";
+
+"yearTitle" = "Рік";
+"monthTitle" = "Місяць";
+"dayTitle" = "День";
+
+"newRemindsSectionTitle" = "Сповіщення";
+"noNewRemindsText" = "Запланованих нагадувань ще немає.";
+"notificationsNotAllowedText" = "Ви не дозволили надсилати сповіщення.";
+"allowNotificationsButton" = "Дозволити сповіщення";
+"editEventButtonTitle" = "Редагувати подію";
+
+"eventDetailsSectionTitle" = "Деталі події";
+"eventTitleTitle" = "Назва події";
+"eventTitlePlaceholder" = "Назва події";
+"eventNameTitle" = "Ім'я";
+"eventNamePlaceholder" = "Ім'я";
+"eventCommentTitle" = "Коментар";
+"eventCommentPlaceholder" = "Коментар";
+"eventDateTitle" = "Дата події";
+"birthdayDateTitle" = "Дата народження";
+"eventDateLabel" = "Дата події:";
+"eventDateWithYearToggleTitle" = "З роком";
+"selectEventDateTitle" = "Виберіть дату події";
+"cancelTitle" = "Скасувати";
+"deleteButtonTitle" = "Видалити";
+"doneTitle" = "Готово";
+
+"alertsSectionTitle" = "Налаштування сповіщень";
+"repeatEveryTitle" = "Період події";
+"addRemindTimeButtonTitle" = "Додати час нагадування";
+"remindTime1Title" = "Час нагадування 1";
+"remindTime2Title" = "Час нагадування 2";
+"remindOnDayOfEventTitle" = "Нагадування в день події:";
+"isNecessaryToRepeatTitle" = "Чи потрібно повторювати?";
+"remindBeforeDayOfEventTitle" = "Нагадування перед днем події:";
+"daysBeforeTitle" = "Днів до";

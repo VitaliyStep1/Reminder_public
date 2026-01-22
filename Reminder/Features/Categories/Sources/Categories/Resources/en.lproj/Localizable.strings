@@ -1,0 +1,54 @@
+"deleteEventTitle" = "Delete this event?";
+"deleteEventMessage" = "This action cannot be undone.";
+"eventTitleEmptyAlert" = "Event title should not be empty";
+"eventNotSavedAlert" = "Event was not saved";
+"notificationsWereNotScheduled" = "Notifications were not scheduled";
+"eventDeleteFailedAlert" = "Deleting event failed";
+"eventNotFoundAlert" = "Event was not found";
+"categoryNotFoundAlert" = "Category was not found";
+"eventsNotFetchedAlert" = "Events were not fetched";
+
+"createEventScreenTitle" = "Add Event";
+"createEventButtonTitle" = "Create";
+"editEventScreenTitle" = "Edit Event";
+"saveEventButtonTitle" = "Save";
+
+"yearTitle" = "Year";
+"monthTitle" = "Month";
+"dayTitle" = "Day";
+
+"newRemindsSectionTitle" = "New Reminds";
+"noNewRemindsText" = "There are no new reminds yet.";
+"notificationsNotAllowedText" = "You have not allowed to send notifications yet.";
+"allowNotificationsButton" = "Allow notifications";
+
+"eventDetailsSectionTitle" = "Event details";
+"eventTitleTitle" = "Title";
+"eventTitlePlaceholder" = "Title";
+"eventCommentTitle" = "Comment";
+"eventCommentPlaceholder" = "Comment";
+"eventDateTitle" = "Date";
+"eventDateLabel" = "Event date:";
+"selectEventDateTitle" = "Select Event Date";
+"cancelTitle" = "Cancel";
+"deleteButtonTitle" = "Delete";
+"doneTitle" = "Done";
+
+"alertsSectionTitle" = "Alerts";
+"repeatEveryTitle" = "Repeat every";
+"addRemindTimeButtonTitle" = "Add remind time";
+"remindTime1Title" = "Remind time 1";
+"remindTime2Title" = "Remind time 2";
+
+"categoriesNavigationTitle" = "Categories";
+"noCategoriesText" = "No categories was found";
+"eventSingular" = "Event";
+"eventsPlural" = "Events";
+"eventsPluralMany" = "Events";
+"addNewEventButtonTitle" = "Add new event";
+"categoryNoEventsText" = "There are no events in this category yet.\nPlease add one!";
+"addedEventsFormat" = "%d added %@";
+"agreementTitle" = "Agreement";
+"agreementAcceptButtonTitle" = "I have read and I accept it";
+"agreementCancelButtonTitle" = "Cancel";
+"agreementMessage" = "We do not guarantee that you will receive notifications for the events you add. We also assume no responsibility if you suffer any harm due to not receiving notifications created in the app. Use the app only as an additional tool for reminding you about events.";

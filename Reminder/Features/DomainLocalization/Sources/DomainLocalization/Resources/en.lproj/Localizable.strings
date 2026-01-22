@@ -1,0 +1,12 @@
+/*
+  Localizable.strings
+  Domain
+
+  Created by OpenAI's assistant.
+
+*/
+"birthdays" = "Birthdays";
+"aniversaries" = "Aniversaries";
+"other_year" = "Yearly";
+"other_month" = "Monthly";
+"other_day" = "Daily";

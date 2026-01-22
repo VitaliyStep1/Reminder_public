@@ -1,0 +1,54 @@
+"deleteEventTitle" = "Delete this event?";
+"deleteEventMessage" = "This action cannot be undone.";
+"eventTitleEmptyAlert" = "Event title should not be empty";
+"eventNotSavedAlert" = "Event was not saved";
+"eventDeleteFailedAlert" = "Deleting event failed";
+"eventNotFoundAlert" = "Event was not found";
+"categoryNotFoundAlert" = "Category was not found";
+
+"createEventScreenTitle" = "Add Event";
+"createBirthdayScreenTitle" = "Add Birthday";
+"createAnniversaryScreenTitle" = "Add Anniversary";
+"createNotificationScreenTitle" = "Add Notification";
+"createEventButtonTitle" = "Create";
+"editEventScreenTitle" = "Edit Event";
+"editBirthdayScreenTitle" = "Edit Birthday";
+"editAnniversaryScreenTitle" = "Edit Anniversary";
+"editNotificationScreenTitle" = "Edit Notification";
+"saveEventButtonTitle" = "Save";
+
+"yearTitle" = "Year";
+"monthTitle" = "Month";
+"dayTitle" = "Day";
+
+"newRemindsSectionTitle" = "Notifications";
+"noNewRemindsText" = "There are no new reminds yet.";
+"notificationsNotAllowedText" = "You have not allowed to send notifications yet.";
+"allowNotificationsButton" = "Allow notifications";
+"editEventButtonTitle" = "Edit event";
+
+"eventDetailsSectionTitle" = "Event details";
+"eventTitleTitle" = "Event title";
+"eventTitlePlaceholder" = "Event title";
+"eventNameTitle" = "Name";
+"eventNamePlaceholder" = "Name";
+"eventCommentTitle" = "Comment";
+"eventCommentPlaceholder" = "Comment";
+"eventDateTitle" = "Event date";
+"birthdayDateTitle" = "Birthday date";
+"eventDateLabel" = "Event date:";
+"eventDateWithYearToggleTitle" = "With year";
+"selectEventDateTitle" = "Select Event Date";
+"cancelTitle" = "Cancel";
+"deleteButtonTitle" = "Delete";
+"doneTitle" = "Done";
+
+"alertsSectionTitle" = "Notifications settings";
+"repeatEveryTitle" = "Period of event";
+"addRemindTimeButtonTitle" = "Add remind time";
+"remindTime1Title" = "Remind time 1";
+"remindTime2Title" = "Remind time 2";
+"remindOnDayOfEventTitle" = "Remind on day of event:";
+"isNecessaryToRepeatTitle" = "Is necessary to repeat?";
+"remindBeforeDayOfEventTitle" = "Remind before the day of event:";
+"daysBeforeTitle" = "Days before";

@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  ClosestTab
+
+  Created by Vitaliy Stepanenko on 17.11.2025.
+  
+*/
+"closestScreenTitle" = "Найближчі події";
+"closestAllFilterTitle" = "Усі";
+"closestCreateEventButtonTitle" = "Створити подію";
+"closestAddEventButtonTitle" = "Додати";
+"closestNoEventsText" = "Подій ще немає.\nБудь ласка, створіть першу.";
+"closestEventsCountFormat" = "Подій: %d";
+"closestThisMonthTitle" = "Цей місяць";
+"closestNextMonthTitle" = "Наступний місяць";
+"closestTodayTitle" = "Сьогодні";
+"closestTomorrowTitle" = "Завтра";
