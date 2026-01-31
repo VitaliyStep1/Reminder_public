@@ -11,6 +11,7 @@
 		11A5A4B5B3A429212C69A47C /* ClosestFeatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5162CAE3604220EA79ABF69 /* ClosestFeatureAssembly.swift */; };
 		13B1166757B452B7610AFB65 /* AnalyticsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20684FED493901289D2E9E36 /* AnalyticsAssembly.swift */; };
 		1DBC4976456840CE36E73FE3 /* Event.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = C20062C85006EBDD3A083C98 /* Event.framework */; };
+		1ECDC7B682DE936FBE8657BC /* AppServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343D9DC966051551D2D442F /* AppServicesAssembly.swift */; };
 		1FB78B37C9BF592B89C41139 /* Analytics.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 15E1A79FAAC36E795F1B560C /* Analytics.framework */; };
 		2AEE76208070951EC7522745 /* AppDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12FD88A2D60E2FAAA6D1DB1 /* AppDI.swift */; };
 		2F4804C0824B77A6BC2F31A5 /* Language.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F36D0BE73750AC3882303D5B /* Language.framework */; };
@@ -94,6 +95,7 @@
 		1EF45B8C0A7F9024D9B0F4B8 /* AppServicesContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppServicesContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20684FED493901289D2E9E36 /* AnalyticsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsAssembly.swift; sourceTree = "<group>"; };
 		23DF356212353E0CCB521573 /* ConfigurationsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationsAssembly.swift; sourceTree = "<group>"; };
+		3343D9DC966051551D2D442F /* AppServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServicesAssembly.swift; sourceTree = "<group>"; };
 		371F446ACDF07A4B8CAE93AB /* CreateFeatureAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeatureAssembly.swift; sourceTree = "<group>"; };
 		45DEF12BCA005DF224B55DC6 /* PlatformAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformAssembly.swift; sourceTree = "<group>"; };
 		47599735149B434C10588A92 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				20684FED493901289D2E9E36 /* AnalyticsAssembly.swift */,
+				3343D9DC966051551D2D442F /* AppServicesAssembly.swift */,
 				23DF356212353E0CCB521573 /* ConfigurationsAssembly.swift */,
 				66D36E79885DD9CF98D4B889 /* DomainAssembly.swift */,
 				50390C032D4575E623E35660 /* PersistenceAssembly.swift */,
@@ -325,6 +328,7 @@
 				9084E159F8E63A0959C79BDF /* SettingsFeatureAssembly.swift in Sources */,
 				E2FCEAD1F50B50DF9B046BF1 /* StartFeatureAssembly.swift in Sources */,
 				13B1166757B452B7610AFB65 /* AnalyticsAssembly.swift in Sources */,
+				1ECDC7B682DE936FBE8657BC /* AppServicesAssembly.swift in Sources */,
 				CD7602D6CE35A9E47D369C12 /* ConfigurationsAssembly.swift in Sources */,
 				E575095AE3E77B359AAF1B31 /* DomainAssembly.swift in Sources */,
 				AF82EDA697828CD78BADD63A /* PersistenceAssembly.swift in Sources */,

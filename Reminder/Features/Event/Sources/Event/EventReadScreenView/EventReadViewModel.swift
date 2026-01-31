@@ -74,13 +74,22 @@ public final class EventReadViewModel: ObservableObject {
     defer { isLoading = false }
     screenState = .loading
 
+    // TODO: Refactore
+    // It's better to do next way.
+    // Now if loading event or generating reminders fail
+    // then user see just error information
+    // It's better to do:
+    // If loading event fails - show just error
+    // If loading event successful but generating reminders fail
+    // then show event and show error only for Reminders section
+    
     do {
       let event = try await fetchEventUseCase.execute(eventId: eventId)
       let category = await fetchCategory(for: event)
       let categoryTitle = category?.title
       let categoryType = category?.categoryTypeEnum
       let scheduledNotificationsIds = Set(await fetchScheduledNotificationsIdsUseCase.execute())
-      let reminders = generateNewRemindsUseCase.execute(
+      let reminders = try generateNewRemindsUseCase.execute(
         date: event.date,
         eventPeriod: event.eventPeriod,
         isRemindRepeated: event.isRemindRepeated,

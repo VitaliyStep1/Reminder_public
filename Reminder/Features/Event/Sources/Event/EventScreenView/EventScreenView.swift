@@ -10,12 +10,12 @@ import DesignSystem
 import DomainLocalization
 
 public struct EventScreenView: View {
-  @ObservedObject private var store: EventViewStore
+  @StateObject private var store: EventViewStore
   private let interactor: EventInteractor
   @Environment(\.locale) private var locale
   
   public init(store: EventViewStore, interactor: EventInteractor) {
-    self.store = store
+    self._store = StateObject(wrappedValue: store)
     self.interactor = interactor
   }
   

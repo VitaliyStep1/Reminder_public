@@ -16,5 +16,5 @@ public protocol GenerateNewRemindsUseCaseProtocol: Sendable {
                remindBeforeDays: Int,
                remindBeforeTimeDate: Date,
                isRemindBeforeActive: Bool
-  ) -> (remindOnDayDate: Date?, remindBeforeDate: Date?)
+  ) throws -> (remindOnDayDate: Date?, remindBeforeDate: Date?)
 }

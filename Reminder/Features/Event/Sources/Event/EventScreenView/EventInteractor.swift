@@ -455,18 +455,22 @@ public final class EventInteractor {
     let remindBeforeTimeDate = alertsSectionData.remindBeforeTimeDate
     let isRemindBeforeActive = alertsSectionData.isRemindBeforeActive
       
-    let (remindOnDayDate, remindBeforeDate) = generateNewRemindsUseCase.execute(
-      date: date,
-      eventPeriod: eventPeriod,
-      isRemindRepeated: isRemindRepeated,
-      remindOnDayTimeDate: remindOnDayTimeDate,
-      isRemindOnDayActive: isRemindOnDayActive,
-      remindBeforeDays: remindBeforeDays,
-      remindBeforeTimeDate: remindBeforeTimeDate,
-      isRemindBeforeActive: isRemindBeforeActive
-    )
-    store.newRemindsSectionData.remindOnDayDate = remindOnDayDate
-    store.newRemindsSectionData.remindBeforeDate = remindBeforeDate
+    do {
+      let (remindOnDayDate, remindBeforeDate) = try generateNewRemindsUseCase.execute(
+        date: date,
+        eventPeriod: eventPeriod,
+        isRemindRepeated: isRemindRepeated,
+        remindOnDayTimeDate: remindOnDayTimeDate,
+        isRemindOnDayActive: isRemindOnDayActive,
+        remindBeforeDays: remindBeforeDays,
+        remindBeforeTimeDate: remindBeforeTimeDate,
+        isRemindBeforeActive: isRemindBeforeActive
+      )
+      store.newRemindsSectionData.remindOnDayDate = remindOnDayDate
+      store.newRemindsSectionData.remindBeforeDate = remindBeforeDate
+    } catch {
+      //TODO: Show error that generating reminds failed
+    }
 
     updateNotificationPermissionTask?.cancel()
     updateNotificationPermissionTask = Task { @MainActor in

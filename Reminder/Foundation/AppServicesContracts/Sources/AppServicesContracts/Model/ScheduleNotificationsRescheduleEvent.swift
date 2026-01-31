@@ -8,7 +8,7 @@
 import Foundation
 import DomainContracts
 
-public struct ScheduleNotificationsRescheduleEvent: Sendable, Hashable {
+public struct ScheduleNotificationsRescheduleEvent: Sendable {
   public let originalEvent: Event
   public var isToScheduleOnDay: Bool
   public var isToScheduleBefore: Bool

@@ -12,14 +12,14 @@ import PersistenceContracts
 
 public struct SetupInitialDataUseCase: SetupInitialDataUseCaseProtocol {
   private let defaultCategoriesDataService: DefaultCategoriesDataServiceProtocol
-  private let dBCategoriesService: DBCategoriesServiceProtocol
+  private let dbCategoriesService: DBCategoriesServiceProtocol
 
   public init(
     defaultCategoriesDataService: DefaultCategoriesDataServiceProtocol,
-    dBCategoriesService: DBCategoriesServiceProtocol
+    dbCategoriesService: DBCategoriesServiceProtocol
   ) {
     self.defaultCategoriesDataService = defaultCategoriesDataService
-    self.dBCategoriesService = dBCategoriesService
+    self.dbCategoriesService = dbCategoriesService
   }
 
   public func execute() async {
@@ -35,6 +35,6 @@ public struct SetupInitialDataUseCase: SetupInitialDataUseCaseProtocol {
       )
     }
 
-    try? await dBCategoriesService.addOrUpdate(defaultCategories: persistenceDefaultCategories)
+    try? await dbCategoriesService.addOrUpdate(defaultCategories: persistenceDefaultCategories)
   }
 }

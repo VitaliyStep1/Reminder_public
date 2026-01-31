@@ -22,9 +22,9 @@ public struct GenerateNewRemindsUseCase: GenerateNewRemindsUseCaseProtocol {
                       remindBeforeDays: Int,
                       remindBeforeTimeDate: Date, // Time for remindBeforeTimeDate
                       isRemindBeforeActive: Bool
-  ) -> (remindOnDayDate: Date?, remindBeforeDate: Date?) {
+  ) throws -> (remindOnDayDate: Date?, remindBeforeDate: Date?) {
     
-    let (remindOnDayDate, remindBeforeDate) = calculateRemindDatesForEventService.calculateRemindDates(
+    let (remindOnDayDate, remindBeforeDate) = try calculateRemindDatesForEventService.calculateRemindDates(
       eventDate: date,
       eventPeriod: eventPeriod,
       isRemindRepeated: isRemindRepeated,

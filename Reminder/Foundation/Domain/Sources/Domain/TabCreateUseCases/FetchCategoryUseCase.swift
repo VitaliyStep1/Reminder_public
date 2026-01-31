@@ -10,14 +10,14 @@ import DomainContracts
 import PersistenceContracts
 
 public struct FetchCategoryUseCase: FetchCategoryUseCaseProtocol {
-  private let dBCategoriesService: DBCategoriesServiceProtocol
+  private let dbCategoriesService: DBCategoriesServiceProtocol
 
-  public init(dBCategoriesService: DBCategoriesServiceProtocol) {
-    self.dBCategoriesService = dBCategoriesService
+  public init(dbCategoriesService: DBCategoriesServiceProtocol) {
+    self.dbCategoriesService = dbCategoriesService
   }
 
   public func execute(categoryId: Identifier) async throws -> DomainContracts.Category? {
-    let category = try? await dBCategoriesService.fetchCategory(categoryId: categoryId)
+    let category = try? await dbCategoriesService.fetchCategory(categoryId: categoryId)
     return category.flatMap { category in
       let categoryRepeat = CategoryRepeatEnum(fromRawValue: category.categoryRepeat)
       let categoryGroup = CategoryGroupEnum(fromRawValue: category.categoryGroup)

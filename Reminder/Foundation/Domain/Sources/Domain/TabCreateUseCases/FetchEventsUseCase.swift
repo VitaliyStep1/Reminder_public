@@ -10,14 +10,14 @@ import DomainContracts
 import PersistenceContracts
 
 public struct FetchEventsUseCase: FetchEventsUseCaseProtocol {
-  private let dBEventsService: DBEventsServiceProtocol
+  private let dbEventsService: DBEventsServiceProtocol
 
-  public init(dBEventsService: DBEventsServiceProtocol) {
-    self.dBEventsService = dBEventsService
+  public init(dbEventsService: DBEventsServiceProtocol) {
+    self.dbEventsService = dbEventsService
   }
 
   public func execute(categoryId: Identifier) async throws -> [DomainContracts.Event] {
-    let events = try await dBEventsService.fetchEvents(categoryId: categoryId)
+    let events = try await dbEventsService.fetchEvents(categoryId: categoryId)
     return events.map { event in
       DomainContracts.Event(
         id: event.id,

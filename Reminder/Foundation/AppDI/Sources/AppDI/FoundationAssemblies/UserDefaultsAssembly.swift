@@ -20,14 +20,6 @@ struct UserDefaultsAssembly: Assembly {
     }
     .inObjectScope(.container)
 
-    container.register(DefaultRemindTimeServiceProtocol.self) { resolver in
-      let appConfiguration = resolver.resolve(AppConfigurationProtocol.self)!
-      let userDefaultsService = resolver.resolve(UserDefaultsServiceProtocol.self)!
-
-      return DefaultRemindTimeService(appConfiguration: appConfiguration, userDefaultsService: userDefaultsService)
-    }
-    .inObjectScope(.container)
-
     container.register(TakeDefaultRemindTimeDateUseCaseProtocol.self) { resolver in
       let defaultRemindTimeService = resolver.resolve(DefaultRemindTimeServiceProtocol.self)!
       return TakeDefaultRemindTimeDateUseCase(defaultRemindTimeService: defaultRemindTimeService)

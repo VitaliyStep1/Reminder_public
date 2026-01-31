@@ -32,6 +32,7 @@
 		78DDDE90179B48724A6A4786 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A112875E79D50FE926628C7A /* Identifier.swift */; };
 		7A5BAE927A2F5D61CAA557E8 /* RequestLocalNotificationsAllowedUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B751CAC6635A4E7984E84CA /* RequestLocalNotificationsAllowedUseCaseProtocol.swift */; };
 		832D1FD807CEED5E8A584D57 /* SetupInitialDataUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6696A3A666D4918F88E8077 /* SetupInitialDataUseCaseProtocol.swift */; };
+		9C461BFDD507ABBFC7D376B8 /* CalculateRemindDatesForEventServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16EF3C57CBC4271F13E5071 /* CalculateRemindDatesForEventServiceProtocol.swift */; };
 		A19BA545E01545662E02E636 /* FetchIsLocalNotificationsAllowedUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F30E68C92E20D9621C2293 /* FetchIsLocalNotificationsAllowedUseCaseProtocol.swift */; };
 		A2A6AD7EA539BD1712D85A9F /* EventPeriodEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6977B045C91008720AD00D72 /* EventPeriodEnum.swift */; };
 		A2D3F9ED25825E5803FF1CD4 /* CreateEventUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDC8AA333B561EEFDE2984F /* CreateEventUseCaseProtocol.swift */; };
@@ -92,6 +93,7 @@
 		A112875E79D50FE926628C7A /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		A396EE1CC211594D924232E0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A51F64ED25487EF6B8707D3B /* SaveEventUseCaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveEventUseCaseInfo.swift; sourceTree = "<group>"; };
+		B16EF3C57CBC4271F13E5071 /* CalculateRemindDatesForEventServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateRemindDatesForEventServiceProtocol.swift; sourceTree = "<group>"; };
 		B5F78D23E5FB0808573EFD4A /* FetchDefaultRemindTimeDateUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDefaultRemindTimeDateUseCaseProtocol.swift; sourceTree = "<group>"; };
 		B8706BD1D2AA0DAC190EEC1F /* FetchEventsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEventsUseCaseProtocol.swift; sourceTree = "<group>"; };
 		BDDC8AA333B561EEFDE2984F /* CreateEventUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventUseCaseProtocol.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				EDE41893EEB6F332682F2F76 /* EventUseCases */,
 				5066C2602A09B25ED761A02A /* Model */,
+				E93D7945561823C8465E9BE8 /* ServicesProtocols */,
 				8CC0A57752062FBB45E10F5E /* TabClosestUseCases */,
 				C690137AB85A3BABD697F11D /* TabCreateUseCases */,
 				35AF9836B9866B33FFE8699F /* TabSettingsUseCases */,
@@ -237,6 +240,14 @@
 			path = TabCreateUseCases;
 			sourceTree = "<group>";
 		};
+		E93D7945561823C8465E9BE8 /* ServicesProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				B16EF3C57CBC4271F13E5071 /* CalculateRemindDatesForEventServiceProtocol.swift */,
+			);
+			path = ServicesProtocols;
+			sourceTree = "<group>";
+		};
 		EDE41893EEB6F332682F2F76 /* EventUseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +337,7 @@
 				29B2FC323684338427DC68CB /* NewRemind.swift in Sources */,
 				1C96E1D1FA1CACE82CF83F0D /* SaveEventUseCaseError.swift in Sources */,
 				F7B15FDAD13849F0D12E275C /* SaveEventUseCaseInfo.swift in Sources */,
+				9C461BFDD507ABBFC7D376B8 /* CalculateRemindDatesForEventServiceProtocol.swift in Sources */,
 				4BA5FA80ED4559ABC63AD2E2 /* FetchAllFutureEventsUseCaseProtocol.swift in Sources */,
 				23FFC2C2C2A2124995B8EE8E /* FetchScheduledNotificationsIdsUseCaseProtocol.swift in Sources */,
 				A2D3F9ED25825E5803FF1CD4 /* CreateEventUseCaseProtocol.swift in Sources */,

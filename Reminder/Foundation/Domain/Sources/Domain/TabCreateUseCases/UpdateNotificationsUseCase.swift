@@ -9,7 +9,6 @@ import Foundation
 import AppServicesContracts
 import DomainContracts
 import UserDefaultsStorage
-//import PersistenceContracts
 
 public struct UpdateNotificationsUseCase: UpdateNotificationsUseCaseProtocol {
   private let updateNotificationsService: UpdateNotificationsServiceProtocol
@@ -31,7 +30,15 @@ public struct UpdateNotificationsUseCase: UpdateNotificationsUseCaseProtocol {
       return
     }
 
-    try? await updateNotificationsService.updateNotifications()
-    userDefaultsService.lastNotificationsUpdateDate = now
+    do {
+      try await updateNotificationsService.updateNotifications()
+      userDefaultsService.lastNotificationsUpdateDate = now
+    }
+    catch is CancellationError {
+      return
+    }
+    catch {
+      //TODO: Log the error
+    }
   }
 }

@@ -8,47 +8,48 @@
 import Foundation
 import DomainContracts
 
-public final class CalculateRemindDatesForEventService {
+public enum CalculateRemindDatesForEventServiceError: Error {
+  case onDayDateCreationFailed
+  case beforeDateCreationFailed
+}
+
+public final class CalculateRemindDatesForEventService: CalculateRemindDatesForEventServiceProtocol {
   
   public init() {}
   
   public func calculateRemindDates(eventDate: Date, // Date for remindOnDayDate
-                      eventPeriod: EventPeriodEnum,
-                      isRemindRepeated: Bool,
-                      remindOnDayTimeDate: Date, // Time for remindOnDayDate
-                      isRemindOnDayActive: Bool,
-                      remindBeforeDays: Int,
-                      remindBeforeTimeDate: Date, // Time for remindBeforeTimeDate
-                      isRemindBeforeActive: Bool
-  ) -> (remindOnDayDate: Date?, remindBeforeDate: Date?) {
+                                   eventPeriod: EventPeriodEnum,
+                                   isRemindRepeated: Bool,
+                                   remindOnDayTimeDate: Date, // Time for remindOnDayDate
+                                   isRemindOnDayActive: Bool,
+                                   remindBeforeDays: Int,
+                                   remindBeforeTimeDate: Date, // Time for remindBeforeTimeDate
+                                   isRemindBeforeActive: Bool
+  ) throws -> (remindOnDayDate: Date?, remindBeforeDate: Date?) {
     let calendar = Calendar.current
-    let now = Date()
-
-    let eventPeriodComponents = periodComponents(for: eventPeriod)
-
-    let changedEventDate = calculateChangedDate(eventDate: eventDate, eventPeriod: eventPeriod, calendar: calendar)
-    
-    let eventDateTimeDate = combine(date: changedEventDate, withTimeFrom: remindOnDayTimeDate, calendar: calendar)
-    
-    var remindBeforeBaseDate: Date?
-    if let eventDateTimeDate {
-      remindBeforeBaseDate = calendar.date(byAdding: .day, value: -remindBeforeDays, to: eventDateTimeDate)
-    }
-    
-    let remindBeforeDateTime = remindBeforeBaseDate.flatMap { baseDate in
-      combine(date: baseDate, withTimeFrom: remindBeforeTimeDate, calendar: calendar)
+    let nowDate = Date()
+    let minimumDate = calendar.date(byAdding: .minute, value: 2, to: nowDate)
+    guard let minimumDate else {
+      throw CalculateRemindDatesForEventServiceError.onDayDateCreationFailed
     }
     
     let remindOnDayDate: Date?
     if isRemindOnDayActive {
-      remindOnDayDate = adjustedDate(eventDateTimeDate, eventPeriodComponents, now: now, calendar: calendar)
+      remindOnDayDate = try calculateRemindOnDayDate(eventDate: eventDate, minimumDate: minimumDate, remindOnDayTimeDate: remindOnDayTimeDate, calendar: calendar, eventPeriod: eventPeriod)
     } else {
       remindOnDayDate = nil
     }
     
-    let remindBeforeDate: Date?
+    var remindBeforeDate: Date?
     if isRemindBeforeActive {
-      remindBeforeDate = adjustedDate(remindBeforeDateTime, eventPeriodComponents, now: now, calendar: calendar)
+      remindBeforeDate = try calculateRemindBeforeDate(eventDate: eventDate, minimumDate: minimumDate, remindBeforeDays: remindBeforeDays, remindBeforeTimeDate: remindBeforeTimeDate, remindOnDayTimeDate: remindOnDayTimeDate, calendar: calendar, eventPeriod: eventPeriod)
+      
+      if !isRemindRepeated, let copyRemindBeforeDate = remindBeforeDate, let remindOnDayDate {
+        if copyRemindBeforeDate >= remindOnDayDate {
+          remindBeforeDate = nil
+        }
+      }
+      
     } else {
       remindBeforeDate = nil
     }
@@ -56,63 +57,159 @@ public final class CalculateRemindDatesForEventService {
     return (remindOnDayDate: remindOnDayDate, remindBeforeDate: remindBeforeDate)
   }
   
-  private func combine(date: Date, withTimeFrom time: Date, calendar: Calendar) -> Date? {
-    let timeComponents = calendar.dateComponents([.hour, .minute, .second], from: time)
-    return calendar.date(bySettingHour: timeComponents.hour ?? 0,
-                         minute: timeComponents.minute ?? 0,
-                         second: timeComponents.second ?? 0,
-                         of: date)
+  private func calculateRemindOnDayDate(eventDate: Date, minimumDate: Date, remindOnDayTimeDate: Date, calendar: Calendar, eventPeriod: EventPeriodEnum) throws -> Date {
+    let remindOnDayDate = try calculateNextRemindOnDayDateRelativelyToDate(eventDate: eventDate, timeDate: remindOnDayTimeDate, relativeDate: minimumDate, calendar: calendar, eventPeriod: eventPeriod)
+    return remindOnDayDate
   }
   
-  private func adjustedDate(_ date: Date?, _ period: DateComponents, now: Date, calendar: Calendar) -> Date? {
-    guard var date else {
-      return nil
-    }
+  private func calculateNextRemindOnDayDateRelativelyToDate(eventDate: Date, timeDate: Date, relativeDate: Date, calendar: Calendar, eventPeriod: EventPeriodEnum) throws -> Date {
     
-    while date <= now {
-      guard let newDate = calendar.date(byAdding: period, to: date) else {
-        break
+    switch eventPeriod {
+    case .everyDay:
+      let timeComponents = calendar.dateComponents([.hour, .minute], from: timeDate)
+      var matchComponents = DateComponents(hour: timeComponents.hour, minute: timeComponents.minute)
+      let remindDate = calendar.nextDate(after: relativeDate, matching: matchComponents, matchingPolicy: .nextTime)
+      guard let remindDate else {
+        throw CalculateRemindDatesForEventServiceError.onDayDateCreationFailed
       }
-      date = newDate
+      return remindDate
+      
+    case .everyMonth:
+      let thisMonthRemindDate = try calculateThisMonthRemindForMonthPeriod(eventDate: eventDate, calendar: calendar, minimumDate: relativeDate, timeDate: timeDate)
+      if thisMonthRemindDate > relativeDate {
+        return thisMonthRemindDate
+      }
+      let nextMonthRemindDate = try calculateNextMonthRemindForMonthPeriod(eventDate: eventDate, calendar: calendar, minimumDate: relativeDate, timeDate: timeDate)
+      return nextMonthRemindDate
+    case .everyYear:
+      let thisYearRemindDate = try calculateThisYearRemindForYearPeriod(eventDate: eventDate, calendar: calendar, minimumDate: relativeDate, timeDate: timeDate)
+      if thisYearRemindDate > relativeDate {
+        return thisYearRemindDate
+      }
+      let nextYearRemindDate = try calculateNextYearRemindForYearPeriod(eventDate: eventDate, calendar: calendar, minimumDate: relativeDate, timeDate: timeDate)
+      return nextYearRemindDate
     }
+  }
+  
+  private func calculateThisYearRemindForYearPeriod(eventDate: Date, calendar: Calendar, minimumDate: Date, timeDate: Date) throws -> Date {
+    let year = calendar.component(.year, from: minimumDate)
+    let remindDate = try calculateRemindForYearPeriod(eventDate: eventDate, calendar: calendar, year: year, timeDate: timeDate)
+    return remindDate
+  }
+  
+  private func calculateNextYearRemindForYearPeriod (eventDate: Date, calendar: Calendar, minimumDate: Date, timeDate: Date) throws -> Date {
+    let year = calendar.component(.year, from: minimumDate) + 1
+    let remindDate = try calculateRemindForYearPeriod(eventDate: eventDate, calendar: calendar, year: year, timeDate: timeDate)
+    return remindDate
+  }
+  
+  private func calculateRemindForYearPeriod(eventDate: Date, calendar: Calendar, year: Int, timeDate: Date) throws -> Date {
+    let month = calendar.component(.month, from: eventDate)
+    let day = calendar.component(.day, from: eventDate)
+    let hour = calendar.component(.hour, from: timeDate)
+    let minute = calendar.component(.minute, from: timeDate)
     
-    return date
-  }
-  
-  private func periodComponents(for eventPeriod: EventPeriodEnum) -> DateComponents {
-    switch eventPeriod {
-    case .everyYear:
-      return DateComponents(year: 1)
-    case .everyMonth:
-      return DateComponents(month: 1)
-    case .everyDay:
-      return DateComponents(day: 1)
+    let components = DateComponents(year: year, month: month, day: day, hour: hour, minute: minute)
+    let date = calendar.date(from: components)
+    if let date {
+      return date
+    } else {
+      if month == 2 && day == 29 {
+        let correctedDay = 28
+        let correctedComponents = DateComponents(year: year, month: month, day: correctedDay, hour: hour, minute: minute)
+        let correctedDate = calendar.date(from: correctedComponents)
+        guard let correctedDate else {
+          throw CalculateRemindDatesForEventServiceError.onDayDateCreationFailed
+        }
+        return correctedDate
+      }
+      else {
+        throw CalculateRemindDatesForEventServiceError.onDayDateCreationFailed
+      }
     }
   }
   
-  private func calculateChangedDate(eventDate: Date, eventPeriod: EventPeriodEnum, calendar: Calendar) -> Date {
-    // We need changedEventDate only for decreasing calculation complexity
-    let now = Date()
-    let changedEventDate: Date
-    let currentComponents = calendar.dateComponents([.year, .month, .day], from: now)
-    let eventComponents = calendar.dateComponents([.month, .day], from: eventDate)
-    switch eventPeriod {
-    case .everyYear:
-      let baseDate = calendar.date(from: DateComponents(
-        year: currentComponents.year,
-        month: eventComponents.month,
-        day: eventComponents.day)) ?? eventDate
-      changedEventDate = calendar.date(byAdding: .year, value: -1, to: baseDate) ?? eventDate
-    case .everyMonth:
-      let baseDate = calendar.date(from: DateComponents(
-        year: currentComponents.year,
-        month: currentComponents.month,
-        day: eventComponents.day)) ?? eventDate
-      changedEventDate = calendar.date(byAdding: .month, value: -1, to: baseDate) ?? eventDate
-    case .everyDay:
-      let baseDate = calendar.date(from: currentComponents) ?? eventDate
-      changedEventDate = calendar.date(byAdding: .day, value: -1, to: baseDate) ?? eventDate
+  private func calculateThisMonthRemindForMonthPeriod(eventDate: Date, calendar: Calendar, minimumDate: Date, timeDate: Date) throws -> Date {
+    let year = calendar.component(.year, from: minimumDate)
+    let month = calendar.component(.month, from: minimumDate)
+    let remindDate = try calculateRemindForMonthPeriod(eventDate: eventDate, calendar: calendar, year: year, month: month, timeDate: timeDate)
+    return remindDate
+  }
+  
+  private func calculateNextMonthRemindForMonthPeriod(eventDate: Date, calendar: Calendar, minimumDate: Date, timeDate: Date) throws -> Date {
+    let nextMonth = calendar.component(.month, from: minimumDate) + 1
+    let year: Int
+    let month: Int
+    if nextMonth <= 12 {
+      year = calendar.component(.year, from: minimumDate)
+      month = nextMonth
+    } else {
+      year = calendar.component(.year, from: minimumDate) + 1
+      month = 1
     }
-    return changedEventDate
+    let remindDate = try calculateRemindForMonthPeriod(eventDate: eventDate, calendar: calendar, year: year, month: month, timeDate: timeDate)
+    return remindDate
+  }
+  
+  private func calculateRemindForMonthPeriod(eventDate: Date, calendar: Calendar, year: Int, month: Int, timeDate: Date) throws -> Date {
+    let day = calendar.component(.day, from: eventDate)
+    let hour = calendar.component(.hour, from: timeDate)
+    let minute = calendar.component(.minute, from: timeDate)
+    
+    let components = DateComponents(year: year, month: month, day: day, hour: hour, minute: minute)
+    var remindDate = calendar.date(from: components)
+    if remindDate == nil {
+      let minimumPossibleDays = 28
+      if day > minimumPossibleDays {
+        var correctedDay = day
+        while remindDate == nil {
+          if correctedDay >= minimumPossibleDays {
+            correctedDay -= 1
+            let components = DateComponents(year: year, month: month, day: correctedDay, hour: hour, minute: minute)
+            remindDate = calendar.date(from: components)
+          } else {
+            throw CalculateRemindDatesForEventServiceError.onDayDateCreationFailed
+          }
+        }
+      }
+    }
+    guard let remindDate else {
+      throw CalculateRemindDatesForEventServiceError.onDayDateCreationFailed
+    }
+    return remindDate
+  }
+  
+  
+  private func calculateRemindBeforeDate(eventDate: Date, minimumDate: Date, remindBeforeDays: Int, remindBeforeTimeDate: Date, remindOnDayTimeDate: Date, calendar: Calendar, eventPeriod: EventPeriodEnum) throws -> Date? {
+    let closestRemindOnDayDate = try calculateRemindOnDayDate(eventDate: eventDate, minimumDate: minimumDate, remindOnDayTimeDate: remindOnDayTimeDate, calendar: calendar, eventPeriod: eventPeriod)
+    let remindBeforeDate = try calculateRemindBeforeDateRelatevelyToRemindOnDayDate(remindOnDayDate: closestRemindOnDayDate, remindBeforeDays: remindBeforeDays, remindBeforeTimeDate: remindBeforeTimeDate, calendar: calendar)
+    if remindBeforeDate > minimumDate {
+      return remindBeforeDate
+    } else {
+      let nextRemindOnDayDate = try calculateNextRemindOnDayDateRelativelyToDate(eventDate: eventDate, timeDate: remindOnDayTimeDate, relativeDate: closestRemindOnDayDate, calendar: calendar, eventPeriod: eventPeriod)
+      let remindBeforeDate = try calculateRemindBeforeDateRelatevelyToRemindOnDayDate(remindOnDayDate: nextRemindOnDayDate, remindBeforeDays: remindBeforeDays, remindBeforeTimeDate: remindBeforeTimeDate, calendar: calendar)
+      if remindBeforeDate > minimumDate {
+        return remindBeforeDate
+      } else {
+        return nil
+      }
+    }
+  }
+  
+  private func calculateRemindBeforeDateRelatevelyToRemindOnDayDate(remindOnDayDate: Date, remindBeforeDays: Int, remindBeforeTimeDate: Date, calendar: Calendar) throws -> Date {
+    let agoDate = calendar.date(byAdding: .day, value: -remindBeforeDays, to: remindOnDayDate)
+    guard let agoDate else {
+      throw CalculateRemindDatesForEventServiceError.beforeDateCreationFailed
+    }
+    let year = calendar.component(.year, from: agoDate)
+    let month = calendar.component(.month, from: agoDate)
+    let day = calendar.component(.day, from: agoDate)
+    let hour = calendar.component(.hour, from: remindBeforeTimeDate)
+    let minute = calendar.component(.minute, from: remindBeforeTimeDate)
+    let correctedDate = calendar.date(from: DateComponents(year: year, month: month, day: day, hour: hour, minute: minute))
+    guard let correctedDate else {
+      throw CalculateRemindDatesForEventServiceError.beforeDateCreationFailed
+    }
+    return correctedDate
   }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Event: Sendable, Hashable {
+public struct Event: Sendable {
   public let id: Identifier
   public let title: String
   public let date: Date

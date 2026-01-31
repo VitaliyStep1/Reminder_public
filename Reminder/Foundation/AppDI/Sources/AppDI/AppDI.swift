@@ -25,6 +25,7 @@ public final class AppDI {
         ConfigurationsAssembly(),
         PersistenceAssembly(),
         DomainAssembly(),
+        AppServicesAssembly(),
         AnalyticsAssembly(),
         PlatformAssembly(),
         UserDefaultsAssembly(),

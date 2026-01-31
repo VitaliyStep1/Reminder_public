@@ -10,13 +10,13 @@ import DomainContracts
 import PersistenceContracts
 
 public struct DeleteEventUseCase: DeleteEventUseCaseProtocol {
-  private let dBEventsService: DBEventsServiceProtocol
+  private let dbEventsService: DBEventsServiceProtocol
 
-  public init(dBEventsService: DBEventsServiceProtocol) {
-    self.dBEventsService = dBEventsService
+  public init(dbEventsService: DBEventsServiceProtocol) {
+    self.dbEventsService = dbEventsService
   }
 
   public func execute(eventId: Identifier) async throws {
-    try await dBEventsService.deleteEvent(eventId: eventId)
+    try await dbEventsService.deleteEvent(eventId: eventId)
   }
 }

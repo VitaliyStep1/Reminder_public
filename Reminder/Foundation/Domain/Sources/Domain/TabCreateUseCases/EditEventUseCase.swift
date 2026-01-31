@@ -10,12 +10,12 @@ import DomainContracts
 import PersistenceContracts
 
 public struct EditEventUseCase: EditEventUseCaseProtocol {
-  private let dBEventsService: DBEventsServiceProtocol
-  private let dBCategoriesService: DBCategoriesServiceProtocol
+  private let dbEventsService: DBEventsServiceProtocol
+  private let dbCategoriesService: DBCategoriesServiceProtocol
   
-  public init(dBEventsService: DBEventsServiceProtocol, dBCategoriesService: DBCategoriesServiceProtocol) {
-    self.dBEventsService = dBEventsService
-    self.dBCategoriesService = dBCategoriesService
+  public init(dbEventsService: DBEventsServiceProtocol, dbCategoriesService: DBCategoriesServiceProtocol) {
+    self.dbEventsService = dbEventsService
+    self.dbCategoriesService = dbCategoriesService
   }
 
   public func execute(
@@ -35,9 +35,9 @@ public struct EditEventUseCase: EditEventUseCaseProtocol {
     onDayLNEventId: UUID,
     beforeLNEventId: UUID
   ) async throws -> Identifier? {
-    let calculateCategoryIdForEventService = CalculateCategoryIdForEventService(dBEventsService: dBEventsService, dBCategoriesService: dBCategoriesService)
+    let calculateCategoryIdForEventService = CalculateCategoryIdForEventService(dbEventsService: dbEventsService, dbCategoriesService: dbCategoriesService)
     let newCategoryId = try await calculateCategoryIdForEventService.calculateNewCategoryIdForEditingEvent(eventId: eventId, eventPeriod: eventPeriod)
-    try await dBEventsService.editEvent(
+    try await dbEventsService.editEvent(
       eventId: eventId,
       title: title,
       date: date,
